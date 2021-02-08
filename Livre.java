@@ -2,20 +2,20 @@ public class Livre {
 	
 	private final String titre;
 	private final String auteur;
-	private boolean emprunte;
+	private boolean empruntable;
 	
 	public Livre(String titre, String auteur) {
 		this.titre = titre;
 		this.auteur = auteur;
-		this.emprunte = false;
+		this.empruntable = true;
 	}
 	
 	public void livreEmprunte(boolean emprunt) {
-		this.emprunte = emprunt;
+		this.empruntable = emprunt;
 	}
 
 	public boolean estEmpruntable() {
-		boolean emprunt = this.emprunte;
+		boolean emprunt = this.empruntable;
 		return emprunt;
 	}
 
