@@ -1,5 +1,9 @@
 public class Livre {
 	
+	/*
+	 * Classe livre qui sert à initialiser un livre
+	 * */
+	
 	private final String titre;
 	private final String auteur;
 	private boolean empruntable;
@@ -24,4 +28,8 @@ public class Livre {
 		return titre;
 	}
 
+	public String getAuteur() {
+		String auteur = this.auteur;
+		return auteur;
+	}
 }
