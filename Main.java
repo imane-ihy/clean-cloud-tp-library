@@ -34,6 +34,7 @@ public class Main {
 				utilisateurConnecte = connexion();
 				break;
 			}
+			librairie.ajouterUnUtilisateur(utilisateurConnecte);
 			return utilisateurConnecte;
 		}
 		catch (InputMismatchException e) {
@@ -44,7 +45,7 @@ public class Main {
 
 	// Retourne un utilisateur 
 	public static Utilisateur premiereConnexion() {
-		Utilisateur utilisateurConnecte;
+		Utilisateur utilisateurConnecte = null;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Premiere connexion? (répondez par \"oui\" ou par \"non\")");
 		String premiereConnexionChoix = scanner.next();
@@ -54,10 +55,6 @@ public class Main {
 			break;
 		case "non":
 			utilisateurConnecte = connexion();
-		default:
-			System.out.println("Vous n'avez pas répondu correctement à la question");
-			utilisateurConnecte = premiereConnexion();
-			break;
 		}
 		return utilisateurConnecte;
 	}
